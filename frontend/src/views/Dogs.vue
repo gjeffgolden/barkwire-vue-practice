@@ -11,21 +11,7 @@
 export default {
     data() {
         return {
-            dogs: [
-                {
-                    id: 1,
-                    name: "Bixby",
-                    age: 20
-                }, {
-                    id: 2,
-                    name: "Mesa",
-                    age: 18
-                }, {
-                    id: 3,
-                    name: "Harmony",
-                    age: 4
-                }
-            ]
+            dogs: []
         }
     },
     created() {
@@ -38,6 +24,6 @@ export default {
     }
 }
 </script>
+
 <style lang="">
-    
 </style>
