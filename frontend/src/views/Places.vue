@@ -14,32 +14,22 @@
 export default {
     data() {
         return {
-            places: [
-                {
-                    id: 1,
-                    image_url: "https://shoptennyson.com/wp-content/uploads/job-manager-uploads/main_image_3/2016/11/Local-front.jpg",
-                    name: "Local 46"        
-                }, {
-                    id: 2,
-                    image_url: "https://s3-media0.fl.yelpcdn.com/bphoto/MvcWAHvuTWpVTDQNpoj3tQ/l.jpg",
-                    name: "US Thai Cafe"
-                }
-            ]
+            places: []
         }
     },
-    // created() {
-    //     fetch("http://localhost:3000/dogs")
-    //     .then(response => response.json())
-    //     .then(({dogs}) => {
-    //         // destructured
-    //         this.dogs = dogs
-    //     })
-    // }
+    created() {
+        fetch("http://localhost:3000/places")
+        .then(response => response.json())
+        .then(({places}) => {
+            // destructured
+            this.places = places
+        })
+    }
 }
 </script>
 
 <style lang="scss">
-    places {
+    .places {
         width: 300px;
         img {
             max-width: 100%;
