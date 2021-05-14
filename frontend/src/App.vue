@@ -5,6 +5,9 @@
       <li>
         <router-link to="dogs">Dogs</router-link>
       </li>
+      <li>
+        <router-link to="places">Places</router-link>
+      </li>
     </ul>
   </nav>
   <router-view/>

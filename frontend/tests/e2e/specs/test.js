@@ -8,10 +8,16 @@ describe('Barkwire', () => {
 
   it('Lists dogs', () => {
     cy.visit('/')
-    cy.contains('a', 'dogs').click()
+    cy.contains('a', 'Dogs').click()
     cy.contains('h2', 'Dogs')
     cy.get(".dog-listing").should("have.length.gt", 1)
   })
 
+  it('Lists places', () => {
+    cy.visit('/')
+    cy.contains('a', 'Places').click()
+    cy.contains('h2', 'Places')
+    cy.get(".place-listing").should("have.length.gt", 1)
+  })
 
 })
