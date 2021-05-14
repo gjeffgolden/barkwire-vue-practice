@@ -3,6 +3,7 @@
     <h2>Dogs</h2>
     <ul>
         <li v-for="dog in dogs" :key="dog.id" class="dog-listing">{{dog.name}} - {{dog.age}}</li>
+        <!-- in-line for-loop  -->
     </ul>
     </div>
 </template>
@@ -26,6 +27,14 @@ export default {
                 }
             ]
         }
+    },
+    created() {
+        fetch("http://localhost:3000/dogs")
+        .then(response => response.json())
+        .then(({dogs}) => {
+            // destructured
+            this.dogs = dogs
+        })
     }
 }
 </script>
