@@ -15,7 +15,7 @@ export default {
                     id: 1,
                     name: "Bixby",
                     age: 20
-                    }, {
+                }, {
                     id: 2,
                     name: "Mesa",
                     age: 18
